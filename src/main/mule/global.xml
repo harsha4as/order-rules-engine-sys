@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<configuration-properties doc:name="Configuration properties" doc:id="965e95de-6541-4b3a-8307-b58fb17f86c2" file="properties/${mule.env}.yaml" />
+	<db:config name="order-translation-db-config" doc:name="Database Config" doc:id="dab70721-bf04-41b5-b69a-d0858b137386" >
+		<db:mssql-connection host="localhost" port="1433" user="test" password="Adea@123" databaseName="OrderTranslation"/>
+	</db:config>
+	<global-property doc:name="Global Property" doc:id="0f3451fd-6023-4a74-a538-e9b942914423" name="mule.env" value="local" />
+</mule>
